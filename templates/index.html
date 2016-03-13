@@ -240,9 +240,6 @@
 				<div class="col-md-12 section-heading text-center to-animate">
 					<h2>Order Now and save $200</h2>
                     <div class="row">
-                        <div class="col-sm-8">
-                            <img src="{{ url_for('static', filename='images/bundle.png') }}" style="width:100%"/>
-                        </div>
                         <div class="col-sm-4" style="color: white;">
                             <form id="summary" action="/charge" method="post" enctype="multipart/form-data">
                                 <div class="row">
@@ -289,9 +286,10 @@
                                 <button class="btn btn-primary" id="myStripeButton">Begin Checkout</button>
                             </form>
                         </div>
+                        <div class="col-sm-8">
+                            <img src="{{ url_for('static', filename='images/bundle.png') }}" style="width:100%"/>
+                        </div>
                    </div>
-				</div>
-			</div>
 		</div>
 	</section>
 
