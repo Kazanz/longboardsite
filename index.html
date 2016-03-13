@@ -93,19 +93,33 @@
 	</head>
 	<body>
 
-    <header style="background-color: #212121;  border-bottom: 1px solid white;">
-        <div class="container">
-            <div class="row" style="padding: 15px;">
-                <div class="col-md-6">
-                    <img style="width:130px" src="images/vitesse_logo.png">
-                </div>
-            </div>
-        </div>
-    </header>
+    <header role="banner" id="fh5co-header" style="background-color: #212121;  border-bottom: 1px solid white;">
+		<div class="container">
+			<!-- <div class="row"> -->
+		    <nav class="navbar navbar-default">
+		    <div class="navbar-header">
+		    	<!-- Mobile Toggle Menu Button -->
+				<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+                <a class="navbar-brand" href="index.html"><img style="width:150px;" src="images/vitesse_logo.png"></a> 
+		    </div>
+		    <div id="navbar" class="navbar-collapse collapse">
+		      <ul class="nav navbar-nav navbar-right">
+		        <li class="active"><a href="#" data-nav-section="home"><span>Home</span></a></li>
+		        <li><a href="#" data-nav-section="about"><span>About</span></a></li>
+		        <li><a href="#" data-nav-section="specs"><span>Specs</span></a></li>
+		        <li><a href="#" data-nav-section="faq"><span>F.A.Q.</span></a></li>
+		        <li><a href="#" data-nav-section="testimonials"><span>Testimonials</span></a></li>
+		        <li><a href="#" data-nav-section="order" id="order-btn"><span><div class="btn">Order Now</div></span></a></li>
+		      </ul>
+		    </div>
+		    </nav>
+		  <!-- </div> -->
+		 </div>
+	</header>
 	<section id="fh5co-home" data-section="home" data-stellar-background-ratio="0.5">
 		<div class="gradient"></div>
 		<div class="container">
-			<div class="text-wrap" style="margin-top: -50px;">
+			<div class="text-wrap">
 				<div class="text-inner">
 					<div class="row">
 						<div class="col-md-12">
@@ -120,7 +134,7 @@
 		<div class="slant"></div>
 	</section>
 
-	<section id="fh5co-intro">
+	<section id="fh5co-intro" data-section="about">
 		<div class="container">
 			<div class="row row-bottom-padded-md">
 				<div class="col-md-12 to-animate" id="bio" style="background-color: #F9F9F9;">
@@ -138,19 +152,20 @@
                    </div>
 				</div>
 			</div>
-			<div class="row watch-video text-center to-animate">
-                <h1>Powerful & Efficient</h1>
+            <div data-section="specs"></div>
+			<div class="row watch-video text-center to-animate section-heading">
+                <h2 class="to-animate fadeInUp animated">Power & Efficieny</h2>
                 <div class="row" class="stats">
                     <div class="col-sm-4 border-right"><span class="stat">18</span><span class="measurement">MPH</span></div>
                     <div class="col-sm-4 border-right"><span class="stat">12.4</span><span class="measurement">Miles</span></div>
                     <div class="col-sm-4"><span class="stat">1200</span><span class="measurement">Watts</span></div>
                 </div>
-                <img src="images/specs.jpg" style="width:90%">
+                <img src="images/specs.jpg" style="width:90%; margin-top:40px;">
 			</div>
 		</div>
 	</section>
 
-	<section id="fh5co-services" data-section="services" style="background-image: url(images/full_image_2.jpg);">
+	<section id="fh5co-services" data-section="faq" style="background-image: url(images/full_image_2.jpg);">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 section-heading text-left">
@@ -250,21 +265,15 @@
 		</div>
 	</section>
 
-	<section id="fh5co-counters" style="background-image: url(images/full_image_1.jpg);" data-stellar-background-ratio="0.5">
+	<section id="fh5co-counters" style="background-image: url(images/full_image_1.jpg);" data-stellar-background-ratio="0.5" data-section="order">
 		<div class="fh5co-overlay"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 section-heading text-center to-animate">
-					<h2>Pre Order Now and save $300</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
+					<h2>Pre Order Now and save $200</h2>
                     <center>
-                        <h3>Live Free Live Fast</h3>
                         <a href="#" class="btn btn-primary">Order Now</a>
                     </center>
-
 				</div>
 			</div>
 		</div>
@@ -275,8 +284,7 @@
 		<div class="container">
 			<div class="">
 				<div class="col-md-12 text-center">
-					<p>&copy; Vitesse Board & Lara Kazanski. All Rights Reserved. <br>Created by <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a> Images: <a href="http://pexels.com/" target="_blank">Pexels</a>, <a href="http://plmd.me/" target="_blank">plmd.me</a></p>
-
+                    <p>&copy; Vitesse Board & Lara Kazanski. All Rights Reserved.</p>
 				</div>
 			</div>
 			<div class="row">
