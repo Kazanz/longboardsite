@@ -386,7 +386,16 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   z-index: 2;
   opacity: .9;
-  background-image: url("../images/wood/Wood_Background3.jpg");
+  -webkit-backface-visibility: hidden;
+  background-color: #B5B5B5;
+  /* IE9, iOS 3.2+ */
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIHN0b3AtY29sb3I9IiMzMjk5OTgiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iIzZjYzk5YyIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjEiLz48L2xpbmVhckdyYWRpZW50PjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjdnNnZykiIC8+PC9zdmc+);
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0, #B5B5B5), color-stop(1, #FFFFFF));
+  /* Android 2.3 */
+  background-image: -webkit-linear-gradient(top left, #B5B5B5 0%, #FFFFFF 100%);
+  /* IE10+ */
+  background-image: linear-gradient(to bottom right, #B5B5B5 0%, #FFFFFF 100%);
+  background-image: -ms-linear-gradient(top left, #B5B5B5 0%, #FFFFFF 100%);
 }
 #fh5co-home, #fh5co-home .text-wrap {
   height: 900px;
