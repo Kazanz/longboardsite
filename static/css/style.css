@@ -1409,6 +1409,7 @@ h1, h2, h3, h4, h5, h6 {
 #summary tr {
     text-align:left;
     border-bottom: 1px solid white;
+    font-size: 18px;
 }
 #summary td:nth-child(2) {
     text-align:right;
