@@ -3,11 +3,13 @@ import os
 import stripe
 from flask import Flask, render_template, request, jsonify
 
+from local import SECRET_KEY, PUBLISHABLE_KEY
+
 
 app = Flask(__name__, template_folder="templates", static_folder="static")
 stripe_keys = {
-    'secret_key': os.environ['SECRET_KEY'],
-    'publishable_key': os.environ['PUBLISHABLE_KEY']
+    'secret_key': SECRET_KEY,
+    'publishable_key': PUBLISHABLE_KEY 
 }
 stripe.api_key = stripe_keys['secret_key']
 
@@ -47,6 +49,3 @@ def charge():
         description='Qty 1: Vitesse Electric Longboard'
     )
     return jsonify(order_number=charge.id)
-
-if __name__ == '__main__':
-    app.run()
