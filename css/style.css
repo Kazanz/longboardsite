@@ -398,7 +398,7 @@ h1, h2, h3, h4, h5, h6 {
   background-image: -ms-linear-gradient(top left, #B5B5B5 0%, #FFFFFF 100%);
 }
 #fh5co-home, #fh5co-home .text-wrap {
-  height: 900px;
+  height: 700px;
 }
 #fh5co-home .text-wrap {
   display: table;
@@ -423,19 +423,22 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
   border-bottom: 1px dashed white;
 }
+
+#fh5co-home .text-inner h1, #fh5co-home .text-inner h2 {
+  color: black;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
+}
 #fh5co-home .text-inner h1 {
-  font-size: 50px;
-  color: white;
+  font-size: 40px;
   margin: 0 0 20px 0;
 }
 #logo {
     margin-top: 50px !important;
 }
 #fh5co-home .text-inner h2 {
-  font-size: 28px;
   line-height: 38px;
   font-weight: 300;
-  color: rgba(255, 255, 255, 0.8);
   margin: 0;
 }
 
@@ -570,47 +573,16 @@ h1, h2, h3, h4, h5, h6 {
   float: left;
 }
 .watch-video span {
-  display: block;
   margin-bottom: 20px;
   letter-spacing: 2px;
   text-transform: uppercase;
   font-weight: bold;
+  display: inline;
 }
-.watch-video .btn-video {
-  display: block;
-  font-size: 60px;
-  height: 120px;
-  width: 120px;
-  margin: 0 auto;
-  border: 2px solid #52d3aa;
-  line-height: 0px;
-  display: table;
-  text-align: center;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  border-radius: 50%;
-}
-.watch-video .btn-video:hover, .watch-video .btn-video:focus, .watch-video .btn-video:active {
-  text-decoration: none;
-}
-.watch-video .btn-video i {
-  position: relative;
-  display: table-cell;
-  vertical-align: middle;
-  margin: 0;
-  padding: 0;
-  right: -9px;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-}
-.watch-video .btn-video:hover i, .watch-video .btn-video:focus i {
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  -o-transform: scale(1.1);
-  transform: scale(1.1);
+.watch-video .stat {
+  font-size:60px;
+  color: black;
+  margin-right:10px;
 }
 
 #fh5co-services, #fh5co-testimonials, #fh5co-counters, #fh5co-work, #fh5co-contact, #fh5co-about {
@@ -1412,3 +1384,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+#lara {
+    border-radius: 50%;
+}
+#bio {
+    padding: 30px;
+    border: 1px solid #F1F0F0;
+    background-color: #FBFBFB;
+}
+#bio p {
+    font-size: 14px;
+}
+.border-right {
+    border-right: 1px solid black;
+}
