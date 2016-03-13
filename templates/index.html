@@ -76,8 +76,8 @@
 			<div class="text-wrap">
 				<div class="text-inner">
 					<div class="row">
-						<div class="col-md-12">
-                            <h1 class="to-animate" id="logo">FEEL SPEED, PRECISION & SMOOTHNESS</h1>
+						<div class="col-md-12 jumbo-margin">
+                            <h1 class="to-animate" id="main-msg">FEEL SPEED, PRECISION & SMOOTHNESS</h1>
                             <h2 class="to-animate">In the ride of your life</h2>
                             <img src="{{ url_for('static', filename='images/decC3.png') }}" style="width:80%;">
 						</div>
@@ -102,7 +102,7 @@
                         </div>
                     </div>
                     <div class="row">
-					   <center><p><a href="#" class="btn btn-primary">Order Now & Save $200</a></p></center>
+					   <center><p><a href="#order" class="btn btn-primary">Order Now & Save $200</a></p></center>
                    </div>
 				</div>
 			</div>
@@ -122,38 +122,49 @@
     <section id="fh5co-services" data-section="faq" style="background-image: url({{ url_for('static', filename='images/full_image_2.jpg') }});">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12 section-heading text-left">
-					<h2 class=" left-border to-animate">Services</h2>
+				<div class="col-md-12 text-left">
+					<h2 class=" left-border to-animate" style="color:white;">FAQ</h2>
 					<div class="row">
 						<div class="col-md-8 subtext to-animate">
-							<h3>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</h3>
+
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-6 col-sm-6 fh5co-service to-animate">
+					<i class="icon to-animate-2 icon-monitor"></i>
+					<h3>What if I have never ridden a longboard?</h3>
+					<p>We've tested our board out with many first time riders. Because you are no longer focusing on pumping and recentering your weight,
+					Many first time riders find that they learn much quicker with the Vitesse board. </p>
+				</div>
+				<div class="col-md-6 col-sm-6 fh5co-service to-animate">
 					<i class="icon to-animate-2 icon-anchor"></i>
-					<h3>Brand &amp; Strategy</h3>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean</p>
+					<h3>How do I control the board?</h3>
+					<p>A Bluetooth wireless remote controls our board acceleration. The control allows you to speed up, slow down, brake, and switch direction. You turn by shifting your body weight as if on a regular long board. </p>
 				</div>
 				<div class="col-md-6 col-sm-6 fh5co-service to-animate">
 					<i class="icon to-animate-2 icon-layers2"></i>
-					<h3>Web &amp; Interface</h3>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean</p>
+					<h3>How does it charge?</h3>
+					<p>The board charges using a DC power supply, and can take up to two hours for a full charge. The remote is charged using a micro USB and will take 1 hour for a full charge.  The bluetooth remote charges via micro USB.</p>
 				</div>
 
 				<div class="clearfix visible-sm-block"></div>
 
 				<div class="col-md-6 col-sm-6 fh5co-service to-animate">
 					<i class="icon to-animate-2 icon-video2"></i>
-					<h3>Photo &amp; Video</h3>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean</p>
+					<h3>Can the board go up hills?</h3>
+					<p>Yes! both our single motor and our dual motor boards can ride up small to medium inclines. Depending on your weight,the board will go faster or slower. For a faster up hill ride, it is best to approach the hill with some momentum.</p>
 				</div>
 				<div class="col-md-6 col-sm-6 fh5co-service to-animate">
 					<i class="icon to-animate-2 icon-monitor"></i>
-					<h3>CMS &amp; eCommerce</h3>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean</p>
+					<h3>What is the max rider weight?</h3>
+					<p> The maximum rider weight is 260lbs. </p>
+				</div>
+				<div class="col-md-6 col-sm-6 fh5co-service to-animate">
+					<i class="icon to-animate-2 icon-monitor"></i>
+					<h3>How does Vitesse compare to other electric boards?</h3>
+					<p>Unlike other companies we are family owned and operated, and it shows in the quality of service you receive. Also, our boards 1200w motor is more powerful and goes further on one charge.</p>
 				</div>
 
 			</div>
@@ -167,7 +178,7 @@
 					<h2 class="to-animate">Testimonials</h2>
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2 subtext to-animate">
-							<h3>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</h3>
+
 						</div>
 					</div>
 				</div>
@@ -176,12 +187,13 @@
 				<div class="col-md-4">
 					<div class="box-testimony">
 						<blockquote class="to-animate-2">
-							<p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
+							<p>&ldquo;I had never ridden a longboard before and riding the Vitesse board was easier to balance on than a regular longboard. I felt more stable not having to pump.&rdquo;</p>
 						</blockquote>
 						<div class="author to-animate">
-							<figure><img src="{{ url_for('static', filename='images/person1.jpg') }}" alt="Person"></figure>
+                            <figure><img src="{{ url_for('static', filename='images/alex_headshot.jpg') }}" alt="Alex K."></figure>
 							<p>
-							Jean Doe, CEO <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a> <span class="subtext">Creative Director</span>
+							Alex
+                            <span class="subtext">Mechanic - US National Guard</span>
 							</p>
 						</div>
 					</div>
@@ -203,12 +215,13 @@
 				<div class="col-md-4">
 					<div class="box-testimony">
 						<blockquote class="to-animate-2">
-							<p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. &rdquo;</p>
+							<p>&ldquo;My wife and I wanted to test whether a car or the Vitesse board would be faster.  So we raced to the grocery store a couple blocks away, and she beat me there!&rdquo;</p>
 						</blockquote>
 						<div class="author to-animate">
-							<figure><img src="{{ url_for('static', filename='images/person1.jpg') }}" alt="Person"></figure>
+							<figure><img src="{{ url_for('static', filename='images/zach_headshot.jpg') }}" alt="Person"></figure>
 							<p>
-							Chris Nash, Director <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a> <span class="subtext">Creative Director</span>
+                            Zach
+                            <span class="subtext">Software Developer - Tampa</span>
 							</p>
 						</div>
 					</div>
@@ -219,6 +232,7 @@
 		</div>
 	</section>
 
+    <div id="order"></div>
     <section id="fh5co-counters" style="background-image: url({{ url_for('static', filename='images/full_image_1.jpg') }});" data-stellar-background-ratio="0.5" data-section="order">
 		<div class="fh5co-overlay"></div>
 		<div class="container">

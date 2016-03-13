@@ -213,7 +213,7 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
   }
   #fh5co-header #navbar li a {
-    color: rgba(0, 0, 0, 0.5) !important;
+    color: white !important;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
@@ -237,7 +237,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #fh5co-header #navbar li a {
   font-family: "Source Sans Pro", Arial, sans-serif;
-  color: rgba(255, 255, 255, 0.5);
+  color: #FFFFFF;
   position: relative;
   font-size: 19px;
   font-weight: 300;
@@ -1098,18 +1098,18 @@ h1, h2, h3, h4, h5, h6 {
   *display: inline;
   width: 25px;
   height: 3px;
-  color: #52d3aa;
+  color: white;
   font: bold 14px/.4 Helvetica;
   text-transform: uppercase;
   text-indent: -55px;
-  background: #52d3aa;
+  background: white;
   transition: all .2s ease-out;
 }
 .fh5co-nav-toggle i::before, .fh5co-nav-toggle i::after {
   content: '';
   width: 25px;
   height: 3px;
-  background: #52d3aa;
+  background: white;
   position: absolute;
   left: 0;
   -webkit-transition: 0.2s;
@@ -1375,7 +1375,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*# sourceMappingURL=style.css.map */
-
+#main-msg {
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    font-size: 70px;
+    font-weight: 300;
+}
 #lara {
     border-radius: 50%;
 }
@@ -1408,4 +1412,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 #summary td:nth-child(2) {
     text-align:right;
+}
+.jumbo-margin {
+    margin-top: 120px;
+}
+
+@media screen and (max-width: 768px) {
+    #fh5co-home, #fh5co-home .text-wrap {
+        height: 20em;
+    }
+    #fh5co-intro {
+        margin-top: 0px;
+    }
 }
