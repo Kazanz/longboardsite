@@ -202,7 +202,6 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   opacity: 1;
   top: 0;
-  margin-top: 40px;
 }
 @media screen and (max-width: 768px) {
   #fh5co-header {
@@ -213,17 +212,11 @@ h1, h2, h3, h4, h5, h6 {
     -ms-box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
   }
-  #fh5co-header .navbar-brand {
-    color: #52d3aa !important;
-  }
   #fh5co-header #navbar li a {
     color: rgba(0, 0, 0, 0.5) !important;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
-  }
-  #fh5co-header #navbar li a:hover {
-    color: #52d3aa !important;
   }
   #fh5co-header #navbar li a span:before {
     background: transparent !important;
@@ -231,7 +224,6 @@ h1, h2, h3, h4, h5, h6 {
   #fh5co-header #navbar li.active a {
     background: transparent;
     background: none;
-    color: #52d3aa !important;
   }
   #fh5co-header #navbar li.active a span:before {
     visibility: visible;
@@ -318,24 +310,24 @@ h1, h2, h3, h4, h5, h6 {
   color: #52d3aa;
 }
 #fh5co-header.navbar-fixed-top #navbar li a {
-  color: rgba(0, 0, 0, 0.5);
+  color: grey;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
 }
 #fh5co-header.navbar-fixed-top #navbar li a:hover {
-  color: #52d3aa;
+  color: white;
 }
 #fh5co-header.navbar-fixed-top #navbar li.active a {
   background: transparent;
   background: none;
-  color: #52d3aa;
+  color: white;
 }
 #fh5co-header.navbar-fixed-top #navbar li.active a span:before {
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
-  background-color: #52d3aa;
+  background-color: white;
 }
 #fh5co-header .navbar-default {
   border: transparent;
@@ -426,8 +418,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #fh5co-home .text-inner h1, #fh5co-home .text-inner h2 {
   color: black;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-  font-weight: 300;
+  font-family: "Source Sans Pro", Arial, sans-serif;
 }
 #fh5co-home .text-inner h1 {
   font-size: 40px;
@@ -463,9 +454,9 @@ h1, h2, h3, h4, h5, h6 {
 #fh5co-intro {
   position: relative;
   bottom: 0;
-  margin-top: -150px;
+  margin-top: -80px;
   z-index: 10;
-  padding-bottom: 7em;
+  padding-bottom: 3em;
 }
 @media screen and (max-width: 768px) {
   #fh5co-intro {
@@ -1398,4 +1389,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 .border-right {
     border-right: 1px solid black;
+}
+#order-btn  {
+    padding: 9px;
+}
+#order-btn .btn {
+    background: #393e46 !important;
+    color: #fff;
+    outline: none !important;
 }
