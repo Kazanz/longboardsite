@@ -226,18 +226,51 @@
 				<div class="col-md-12 section-heading text-center to-animate">
 					<h2>Order Now and save $200</h2>
                     <div class="row">
-                        <div class="col-sm-4">
+                        <div class="col-sm-7">
                             PIC HERE
                         </div>
-                        <div class="col-sm-8" style="color: white;">
-                            <form action="/charge" method="post" enctype="multipart/form-data">
-                                <p>Includes:</p>
-                                <ul>
-                                    <li>1 Vitesse 1200w Electric Longboard</li>
-                                    <li>1 Bluetooth Remote</li>
-                                    <li>1 AC Power Charger</li>
-                                    <li>FREE Shipping, continental US</li>
-                                </ul>
+                        <div class="col-sm-5" style="color: white;">
+                            <form id="summary" action="/charge" method="post" enctype="multipart/form-data">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <table>
+                                            <tr>
+                                                <td><b>Order Summary:</b></td>
+                                                <td><b>Quantity</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td>1200w Single Motor Electric Longboard</td>
+                                                <td>1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Bluetooth Wireless Remote</td>
+                                                <td>1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>AC Power Charger</td>
+                                                <td>1</td>
+                                            </tr>
+                                        </table>
+                                        <table>
+                                            <tr>
+                                                <td>Price:</td>
+                                                <td>$899</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Pre-order Discount:</td>
+                                                <td style="color: #51D2A9">-$200</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Shipping (Continental US):</td>
+                                                <td>Free</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Total:</b></td>
+                                                <td><b>$699</b></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
                                 <noscript>You must <a href="http://www.enable-javascript.com" target="_blank">enable JavaScript</a> in your web browser in order to checkout.</noscript>
                                 <button class="btn btn-primary" id="myStripeButton">Begin Checkout</button>
                             </form>
@@ -290,12 +323,12 @@
             url: "/charge",
             data: args,
             dataType: 'json',
-            success: function(e) {
-                console.log("Complete");
+            success: function(data) {
+                window.location.replace('/thank-you/' + data.order_number)
             },
             error: function(e) {
-                console.log('error');
-                debugger;
+                console.log('An Error Occured');
+                console.log(e);
             }
           });
         }

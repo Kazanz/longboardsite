@@ -1,7 +1,7 @@
 import os
 
 import stripe
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 
 
 app = Flask(__name__, template_folder="templates", static_folder="static")
@@ -15,6 +15,11 @@ stripe.api_key = stripe_keys['secret_key']
 @app.route('/')
 def index():
     return render_template('index.html', key=stripe_keys['publishable_key'])
+
+
+@app.route('/thank-you/<string:order_number>')
+def thank_you(order_number):
+    return render_template('thank_you.html', order_number=order_number)
 
 
 @app.route('/charge', methods=['POST'])
@@ -35,14 +40,13 @@ def charge():
         card=request.form['id'],
         shipping=shipping,
     )
-    stripe.Charge.create(
+    charge = stripe.Charge.create(
         customer=customer.id,
         amount=amount,
         currency='usd',
         description='Qty 1: Vitesse Electric Longboard'
     )
-    return 200
-
+    return jsonify(order_number=charge.id)
 
 if __name__ == '__main__':
     app.run()
