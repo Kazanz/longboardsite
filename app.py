@@ -26,7 +26,7 @@ def thank_you(order_number):
 
 @app.route('/charge', methods=['POST'])
 def charge():
-    amount = 66900
+    amount = 69900
     shipping = {
         'address': {
             'line1': request.form['shipping_address_line1'],
