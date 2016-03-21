@@ -9,7 +9,7 @@ from local import SECRET_KEY, PUBLISHABLE_KEY
 app = Flask(__name__, template_folder="templates", static_folder="static")
 stripe_keys = {
     'secret_key': SECRET_KEY,
-    'publishable_key': PUBLISHABLE_KEY 
+    'publishable_key': PUBLISHABLE_KEY
 }
 stripe.api_key = stripe_keys['secret_key']
 
@@ -26,7 +26,7 @@ def thank_you(order_number):
 
 @app.route('/charge', methods=['POST'])
 def charge():
-    amount = 69900
+    amount = 62900
     shipping = {
         'address': {
             'line1': request.form['shipping_address_line1'],
