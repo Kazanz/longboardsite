@@ -54,7 +54,7 @@
 		    <div class="navbar-header">
 		    	<!-- Mobile Toggle Menu Button -->
 				<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-                <a class="navbar-brand" href="index.html"><img style="width:150px;" src="{{ url_for('static', filename='images/vitesse_logo.png') }}"></a> 
+                <a class="navbar-brand"><img style="width:150px;" src="{{ url_for('static', filename='images/vitesse_logo.png') }}"></a> 
 		    </div>
 		    <div id="navbar" class="navbar-collapse collapse">
 		      <ul class="nav navbar-nav navbar-right">
@@ -260,7 +260,7 @@
 			<div class="row">
 				<div class="col-md-12 section-heading text-center to-animate">
 					<h2>Order Now and save $200</h2>
-                    <p>The first 15 orders receive the pre-order discount<br>Orders will be shipped when 10 pre-orders have been placed or June 1st</p>
+                    <p>The first 15 orders receive the pre-order discount<br>Pre-orders end in May.</p>
                     <div class="row">
                         <div class="col-sm-4" style="color: white;">
                             <form id="summary" action="/charge" method="post" enctype="multipart/form-data">
@@ -300,6 +300,11 @@
                                             <tr>
                                                 <td><b>Total:</b></td>
                                                 <td><b>629</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <input style="color:black; width: 100%" maxlength="8" id="code" name="code" placeholder="Coupon Code">
+                                                </td>
                                             </tr>
                                         </table>
                                     </div>
@@ -356,6 +361,7 @@
         key: '{{ key }}',
         token: function(token, args) {
           for (var attrname in token) { args[attrname] = token[attrname]; }
+          args.code = $('#code').val();
           $.ajax({
             type: "POST",
             url: "/charge",

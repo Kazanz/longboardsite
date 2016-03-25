@@ -1,7 +1,10 @@
-import os
-
 import stripe
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, redirect, url_for
+from sqlalchemy import Column, Integer, String
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import create_engine
+from sqlalchemy.orm.session import sessionmaker
+
 
 from local import SECRET_KEY, PUBLISHABLE_KEY
 
@@ -12,6 +15,26 @@ stripe_keys = {
     'publishable_key': PUBLISHABLE_KEY
 }
 stripe.api_key = stripe_keys['secret_key']
+
+Base = declarative_base()
+
+
+class Affiliate(Base):
+    __tablename__ = 'affiliates'
+    name = Column(String(250), nullable=False)
+    email = Column(String(250), nullable=False, primary_key=True)
+    address = Column(String(500), nullable=False)
+    code = Column(String(8), nullable=False, unique=True)
+    count = Column(Integer, default=0)
+
+
+engine = create_engine('sqlite:///vitesse.db')
+try:
+    Base.metadata.create_all(engine)
+except:
+    pass
+DBSession = sessionmaker(bind=engine)
+session = DBSession()
 
 
 @app.route('/')
@@ -48,4 +71,30 @@ def charge():
         currency='usd',
         description='Qty 1: Vitesse Electric Longboard'
     )
+
+    code = request.form.get('code')
+    if code:
+        a = session.query(Affiliate).filter_by(code=code).first()
+        if a:
+            a.count += 1
+            session.add(a)
+            session.commit()
+
     return jsonify(order_number=charge.id)
+
+
+@app.route('/affiliates')
+def affiliates():
+    affiliates = session.query(Affiliate).order_by('count desc').all()
+    return render_template('affiliate.html', affiliates=affiliates)
+
+
+@app.route('/affiliates/create', methods=['POST'])
+def affiliate_make():
+    if request.form.get('password') == "JesusIsLord":
+        data = {field: request.form[field]
+                for field in ('name', 'email', 'address', 'code')}
+        a = Affiliate(**data)
+        session.add(a)
+        session.commit()
+    return redirect(url_for('affiliates'))
