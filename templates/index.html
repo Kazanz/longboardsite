@@ -60,6 +60,7 @@
 		      <ul class="nav navbar-nav navbar-right">
 		        <li class="active"><a href="#" data-nav-section="home"><span>Home</span></a></li>
 		        <li><a href="#" data-nav-section="about"><span>About</span></a></li>
+		        <li><a href="#" data-nav-section="riding-vs-driving"><span>Riding vs Driving</span></a></li>
 		        <li><a href="#" data-nav-section="specs"><span>Specs</span></a></li>
 		        <li><a href="#" data-nav-section="faq"><span>F.A.Q.</span></a></li>
 		        <li><a href="#" data-nav-section="testimonials"><span>Testimonials</span></a></li>
@@ -71,14 +72,14 @@
 		 </div>
 	</header>
 	<section id="fh5co-home" data-section="home" data-stellar-background-ratio="0.5">
-		<div class="gradient"  style="background-image: url({{ url_for('static', filename='images/Title_photo.jpg') }}); background-size: cover;"></div>
+		<div class="gradient"  style="background-image: url({{ url_for('static', filename='images/Title_photo.jpg') }}); background-size: cover; background-position: 0px -38px;"></div>
 		<div class="container">
 			<div class="text-wrap">
 				<div class="text-inner">
 					<div class="row">
 						<div class="col-md-12 jumbo-margin" style="margin-top: 0px;">
-                            <h1 class="to-animate" id="main-msg">FEEL SPEED, PRECISION & SMOOTHNESS</h1>
-                            <h2 class="to-animate">In the ride of your life</h2>
+                            <h1 class="to-animate" id="main-msg">Vitesse Electric Longboards</h1>
+                            <h2 class="to-animate">Go Fast, Save Money, have Fun</h2>
 						</div>
 					</div>
 				</div>
@@ -109,7 +110,53 @@
                    </div>
 				</div>
 			</div>
-            <div data-section="specs"></div>
+		</div>
+	</section>
+
+	<section id="fh5co-intro" data-section="riding-vs-driving">
+		<div class="container">
+            <div class="row watch-video text-center to-animate section-heading">
+                <h2 class="to-animate fadeInUp animated">Riding vs Driving</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        Save Money
+                    </div>
+                    <div class="col-md-4">
+                        Save Time
+                    </div>
+                    <div class="col-md-4">
+                        Save Earth
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <canvas id="barChart" style="width:100%" height="400"></canvas>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>Skip 42 Hours of Traffic</h4>
+                        <img style="width: 100%; border-radius: 50%;" src="{{ url_for('static', filename='images/sidewalk-ride.jpg') }}">
+                        <p>Do more of what you Love</p>
+                    </div>
+                    <div class="col-md-4 elephants">
+                        <h4>Eliminate 8000 lbs of CO2 Emissions</h4>
+                        <div class="row">
+                            <div class="col-sm-6"><img src="{{ url_for('static', filename='images/elephant.jpg') }}"></div>
+                            <div class="col-sm-6"><img src="{{ url_for('static', filename='images/elephant.jpg') }}"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6"><img src="{{ url_for('static', filename='images/elephant.jpg') }}"></div>
+                            <div class="col-sm-6"><img src="{{ url_for('static', filename='images/elephant.jpg') }}"></div>
+                        </div>
+                        <p>Thats more than 4 Elephants</p>
+                    </div>
+                </div>
+
+			</div>
+        </div>
+    </section>
+
+	<section id="fh5co-intro" data-section="specs">
+		<div class="container">
 			<div class="row watch-video text-center to-animate section-heading">
                 <h2 class="to-animate fadeInUp animated">Power & Efficieny</h2>
                 <div class="row" class="stats">
@@ -395,6 +442,31 @@
 	<script src="{{ url_for('static', filename='js/jquery.stellar.min.js') }}"></script>
 	<!-- Main JS (Do not remove) -->
 	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+	<!-- Chart JS -->
+	<script src="{{ url_for('static', filename='js/chart.min.js') }}"></script>
+
+    <!-- Make bar chart -->
+    <script>
+        var ctx = document.getElementById("barChart").getContext("2d");
+        var data = {
+            labels: ["Vitesse Board", "One Year of Gas"],
+            datasets: [
+                {
+                    label: "My First dataset",
+                    fillColor: "rgba(220,220,220,0.5)",
+                    strokeColor: "rgba(220,220,220,0.8)",
+                    highlightFill: "rgba(220,220,220,0.75)",
+                    highlightStroke: "rgba(220,220,220,1)",
+                    data: [829, 2000]
+                },
+            ]
+        };
+        options = {
+            scaleShowGridLines : false,
+        };
+        var myBarChart = new Chart(ctx).Bar(data, options);
+    </script>
+
 	<!-- Google Analytics -->
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

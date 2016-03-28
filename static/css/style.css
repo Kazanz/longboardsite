@@ -390,7 +390,7 @@ h1, h2, h3, h4, h5, h6 {
   background-image: -ms-linear-gradient(top left, #B5B5B5 0%, #FFFFFF 100%);
 }
 #fh5co-home, #fh5co-home .text-wrap {
-  height: 800px;
+  height: 550px;
 }
 #fh5co-home .text-wrap {
   display: table;
@@ -419,6 +419,7 @@ h1, h2, h3, h4, h5, h6 {
 #fh5co-home .text-inner h1, #fh5co-home .text-inner h2 {
   color: black;
   font-family: "Source Sans Pro", Arial, sans-serif;
+  font-weight: bold;
 }
 #fh5co-home .text-inner h1 {
   font-size: 40px;
@@ -1425,4 +1426,8 @@ h1, h2, h3, h4, h5, h6 {
     #fh5co-intro {
         margin-top: 0px;
     }
+}
+
+.elephants img {
+    width: 100%;
 }
