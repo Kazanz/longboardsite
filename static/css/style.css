@@ -239,7 +239,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Source Sans Pro", Arial, sans-serif;
   color: #FFFFFF;
   position: relative;
-  font-size: 19px;
+  font-size: 14px;
   font-weight: 300;
 }
 #fh5co-header #navbar li a span {
@@ -420,6 +420,7 @@ h1, h2, h3, h4, h5, h6 {
   color: black;
   font-family: "Source Sans Pro", Arial, sans-serif;
   font-weight: bold;
+  background-color: white;
 }
 #fh5co-home .text-inner h1 {
   font-size: 40px;
@@ -1429,5 +1430,5 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .elephants img {
-    width: 100%;
+    width: 95%;
 }

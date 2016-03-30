@@ -61,6 +61,7 @@
 		        <li class="active"><a href="#" data-nav-section="home"><span>Home</span></a></li>
 		        <li><a href="#" data-nav-section="about"><span>About</span></a></li>
 		        <li><a href="#" data-nav-section="riding-vs-driving"><span>Riding vs Driving</span></a></li>
+		        <li><a href="#" data-nav-section="photos"><span>Photos</span></a></li>
 		        <li><a href="#" data-nav-section="specs"><span>Specs</span></a></li>
 		        <li><a href="#" data-nav-section="faq"><span>F.A.Q.</span></a></li>
 		        <li><a href="#" data-nav-section="testimonials"><span>Testimonials</span></a></li>
@@ -102,7 +103,7 @@
                       </div>
                         <div class="col-sm-9">
 						    <h2>A Better Way to get Around</h2>
-                            <p>I am Lara Kazanski from Tampa, Florida. I started the Vitesse brand because I am tired of sitting in traffic and tired of pumping my longboard on flat Tampa surfaces. I like to go fast! Snowboarding, longboarding, mountain biking, you name it, speed is my adrenaline. Vitesse longboards help me go past traffic while on flat surface as if going downhill. When you buy a Vitesse longboard, you are buying from us. If you want to be just another number on a companies invoice, our boards are not for you. We take pride in relating to each customer making you part of our community.<br><b>That is why I am giving the first 15 pre-orders $200 off.</b></p>
+                            <p>I am Lara Kazanski from Tampa, Florida. I started the Vitesse brand because I am tired of sitting in traffic, tired of paying for gas, and tired of pumping my longboard on flat Tampa surfaces. <b>I have fun going fast!</b> Snowboarding, longboarding, mountain biking, you name it, speed is my adrenaline rush. Vitesse longboards help me go past traffic while on flat surface as if going downhill. I made Vitesse to help everyone <b>save money</b> and <b>save time</b> while riding <b>over 18mph</b>.  When you buy a Vitesse longboard, you are buying from us. If you want to be just another number on a companies invoice, our boards are not for you. We take pride in relating to knowing each of our customers.</p>
                         </div>
                     </div>
                     <div class="row">
@@ -117,28 +118,21 @@
 		<div class="container">
             <div class="row watch-video text-center to-animate section-heading">
                 <h2 class="to-animate fadeInUp animated">Riding vs Driving</h2>
+                <p>By riding a vitesse board instead of driving</p>
                 <div class="row">
                     <div class="col-md-4">
-                        Save Money
+                        <h4 style="margin-bottom: 0px">You save over $1000 on gas</h4>
+                        <p><i>Put more money in your pocket</i></p>
+                        <canvas id="barChart" style="width:100%" height="250"></canvas>
                     </div>
                     <div class="col-md-4">
-                        Save Time
-                    </div>
-                    <div class="col-md-4">
-                        Save Earth
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <canvas id="barChart" style="width:100%" height="400"></canvas>
-                    </div>
-                    <div class="col-md-4">
-                        <h4>Skip 42 Hours of Traffic</h4>
-                        <img style="width: 100%; border-radius: 50%;" src="{{ url_for('static', filename='images/sidewalk-ride.jpg') }}">
-                        <p>Do more of what you Love</p>
+                        <h4 style="margin-bottom: 0px">You skip 42 Hours in traffic each year</h4>
+                        <p><i>Do more of what you Love</i></p>
+                        <img style="width: 100%; height: 300px; border-radius: 50%;" src="{{ url_for('static', filename='images/Title_photo.jpg') }}">
                     </div>
                     <div class="col-md-4 elephants">
-                        <h4>Eliminate 8000 lbs of CO2 Emissions</h4>
+                        <h4 style="margin-bottom: 0px">You eliminate 8000 lbs of CO2 emissions</h4>
+                        <p><i>Thats more than 4 Elephants</i></p>
                         <div class="row">
                             <div class="col-sm-6"><img src="{{ url_for('static', filename='images/elephant.jpg') }}"></div>
                             <div class="col-sm-6"><img src="{{ url_for('static', filename='images/elephant.jpg') }}"></div>
@@ -147,17 +141,22 @@
                             <div class="col-sm-6"><img src="{{ url_for('static', filename='images/elephant.jpg') }}"></div>
                             <div class="col-sm-6"><img src="{{ url_for('static', filename='images/elephant.jpg') }}"></div>
                         </div>
-                        <p>Thats more than 4 Elephants</p>
                     </div>
                 </div>
 
 			</div>
         </div>
+        
+    </section>
+
+    <section data-section="photos">
+        <center><h2 class="to-animate fadeInUp animated">See Vitesse riders on <a target="_blank" href="https://www.instagram.com/vitesse_boards/">Instagram</a></h2><center>
+        <!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/a11b377d766e5ceaa7db9bf835be055e.html" id="lightwidget_a11b377d76" name="lightwidget_a11b377d76"  scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
     </section>
 
 	<section id="fh5co-intro" data-section="specs">
 		<div class="container">
-			<div class="row watch-video text-center to-animate section-heading">
+			<div style="margin-top: 100px;" class="row watch-video text-center to-animate section-heading">
                 <h2 class="to-animate fadeInUp animated">Power & Efficieny</h2>
                 <div class="row" class="stats">
                     <div class="col-sm-4 border-right"><span class="stat">18</span><span class="measurement">MPH</span></div>
@@ -306,8 +305,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 section-heading text-center to-animate">
-					<h2>Order Now and save $200</h2>
-                    <p>The first 15 orders receive the pre-order discount<br>Pre-orders end in May.</p>
+					<h2>Pre-Order Now and save $200</h2>
+                    <p>Accepting pre-orders until the end of May.</p>
                     <div class="row">
                         <div class="col-sm-4" style="color: white;">
                             <form id="summary" action="/charge" method="post" enctype="multipart/form-data">
@@ -376,7 +375,7 @@
                     <p style="font-size: 12px;">&copy; Odessa Organic LLC & Lara Kazanski. All Rights Reserved.</p>
                     <p><i style="font-size:10px">The Vitesse brand is owned by Odessa Organic LLC. Odessa Organic LLC is soley a distributer and does not manufacture products.</i>
                     <br>
-                    <i style="font-size:10px; color: red;">The Vitesse brand, Odessa Organic LLC and all associates recommend riding with caution and are not responsible for any injuries or damages caused by use of any of their products, including but not limited to electric longboards.</i>
+                    <i style="font-size:10px; color: grey;">The Vitesse brand, Odessa Organic LLC and all associates recommend riding with caution and are not responsible for any injuries or damages caused by use of any of their products, including but not limited to electric longboards.</i>
                 </div>
 			</div>
 			<div class="row">
@@ -444,6 +443,8 @@
 	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
 	<!-- Chart JS -->
 	<script src="{{ url_for('static', filename='js/chart.min.js') }}"></script>
+	<!-- Instafeed JS -->
+	<script src="{{ url_for('static', filename='js/instafeed.js') }}"></script>
 
     <!-- Make bar chart -->
     <script>
@@ -467,7 +468,18 @@
         var myBarChart = new Chart(ctx).Bar(data, options);
     </script>
 
-	<!-- Google Analytics -->
+    <!-- Make instagram feed -->
+    <script type="text/javascript">
+        var feed = new Instafeed({
+            accessToken: '3022567845.1677ed0.9608b3995c41488b825d03cd30ce4af5',
+            get: 'user',
+            userId: '3022567845',
+            limit: 32
+        });
+        feed.run();
+    </script>
+
+      	<!-- Google Analytics -->
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
