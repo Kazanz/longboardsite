@@ -85,7 +85,7 @@ def charge():
 
 @app.route('/affiliates')
 def affiliates():
-    affiliates = session.query(Affiliate).order_by('count desc').all()
+    affiliates = session.query(Affiliate).order_by('count desc').order_by('name').all()
     return render_template('affiliate.html', affiliates=affiliates)
 
 
@@ -96,5 +96,9 @@ def affiliate_make():
                 for field in ('name', 'email', 'address', 'code')}
         a = Affiliate(**data)
         session.add(a)
-        session.commit()
+        try:
+            session.commit()
+        except Exception as e:
+            session.rollback()
+            return str(e)
     return redirect(url_for('affiliates'))

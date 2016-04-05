@@ -5,197 +5,46 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Vitesse Electric Longboards</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="The Vitesse Electric Longboard can hit speeds of 18 mph, has a 12.4 mile range per charge, and is a family run business out of Florida." />
-	<meta name="keywords" content="electric skateboard, electric longboard, electric skateboards, electric longboards, vitesse, vitesse boards" />
-	<meta name="author" content="vitesseboards.com" />
-    <meta name="robots" content="noindex">
+        <meta name="robots" content="noindex">
 
-  	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content="Vitesse Electric Longboard"/>
-	<meta property="og:image" content="images/decC3.png"/>
-	<meta property="og:url" content="http://www.vitesseboards.com"/>
-	<meta property="og:site_name" content="Vitesse Electric Longboards"/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="Vitesse Electric Longboard" />
-	<meta name="twitter:image" content="images/decC3.png" />
-	<meta name="twitter:url" content="http://www.vitesseboards.com" />
-	<meta name="twitter:card" content="" />
-
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.png') }}">
-	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
-
-	<!-- Animate.css -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
-	<!-- Bootstrap  -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
-
-	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-
-	<link rel="stylesheet" id="theme-switch" href="{{ url_for('static', filename='css/style.css') }}">
-
-    <style>
-        .affil-table td {
-            padding: 10px;
-        }
-    </style>
-
-	<!-- Modernizr JS -->
-	<script src="{{ url_for('static', filename='js/modernizr-2.6.2.min.js') }}"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="{{ url_for('static', filename='js/respond.min.js') }}"></script>
-	<![endif]-->
+    	<style>
+    	    .affil-table td {
+    	        padding: 10px;
+    	    }
+    	</style>
 	</head>
 	<body>
 
-    <header role="banner" id="fh5co-header" style="background-color: #212121;  border-bottom: 1px solid white;">
-		<div class="container">
-			<!-- <div class="row"> -->
-		    <nav class="navbar navbar-default">
-		    <div class="navbar-header">
-		    	<!-- Mobile Toggle Menu Button -->
-				<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-                <a class="navbar-brand" href="/"><img style="width:150px;" src="{{ url_for('static', filename='images/vitesse_logo.png') }}"></a> 
-		    </div>
-		    <div id="navbar" class="navbar-collapse collapse">
-		      <ul class="nav navbar-nav navbar-right">
-		      </ul>
-		    </div>
-		    </nav>
-		  <!-- </div> -->
-		 </div>
-	</header>
-	<section id="fh5co-home" data-section="home" style="background-image: url({{ url_for('static', filename='images/full_image_1.jpg') }});" data-stellar-background-ratio="0.5">
-		<div class="gradient"></div>
-		<div class="container">
-			<div class="text-wrap">
-				<div class="text-inner">
-					<div class="row">
-						<div class="col-md-12"  style="color: black;">
-                            <form action="/affiliates/create" method="POST">
-                                <input type="text" name="name" id="name" placeholder="name" /><br>
-                                <input type="text" name="email" id="email" placeholder="email" /><br>
-                                <textarea name="address" id="address" placeholder="address"></textarea><br>
-                                <input type="text" name="code" id="code" maxlength="8" placeholder="code" /><br>
-                                <input type="password" name="password" id="password" placeholder="password" /><br>
-                                <input type="submit" value="submit">
-                            </form>
-                        </div>
-						<div class="col-md-12"  style="color: black;">
-                            <br><br>
-                            <center>
-                            <table class="affil-table">
-                                <thead>
-                                    <tr>
-                                        <td>Name</td>
-                                        <td>Email</td>
-                                        <td>Code</td>
-                                        <td>Count</td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                {% for affiliate in affiliates %}
-                                    <tr>
-                                        <td>{{ affiliate.name }}</td>
-                                        <td>{{ affiliate.email }}</td>
-                                        <td>{{ affiliate.code }}</td>
-                                        <td>{{ affiliate.count }}</td>
-                                    </tr>
-                                {% endfor %}
-                                </tbody>
-                            </table>
-                            </center>
-                        </div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="slant"></div>
-	</section>
-
-	<footer id="footer" role="contentinfo">
-		<div class="container">
-			<div class="">
-				<div class="col-md-12 text-center">
-                    <p>&copy; Vitesse Board & Lara Kazanski. All Rights Reserved.</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12 text-center">
-                    <!--
-					<ul class="social social-circle">
-						<li><a href="#"><i class="icon-twitter"></i></a></li>
-						<li><a href="#"><i class="icon-facebook"></i></a></li>
-						<li><a href="#"><i class="icon-youtube"></i></a></li>
-					</ul>
-                    -->
-				</div>
-			</div>
-		</div>
-	</footer>
-
-	<!-- jQuery -->
-	<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
-	<!-- jQuery Easing -->
-	<script src="{{ url_for('static', filename='js/jquery.easing.1.3.js') }}"></script>
-	<!-- Bootstrap -->
-	<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
-
-    <!-- Stripe -->
-    <script src="https://checkout.stripe.com/v2/checkout.js"></script>
-    <!-- Stripe Handler -->
-    <script>
-    var handler = StripeCheckout.configure({
-        key: '{{ key }}',
-        token: function(token, args) {
-          for (var attrname in token) { args[attrname] = token[attrname]; }
-          $.ajax({
-            type: "POST",
-            url: "/charge",
-            data: args,
-            dataType: 'json',
-            success: function(e) {
-                window.location.replace('/thank-you')
-            },
-            error: function(e) {
-                console.log('error');
-                debugger;
-            }
-          });
-        }
-    });
-    document.getElementById('myStripeButton').addEventListener('click', function(e) {
-        // Open Checkout with further options
-        handler.open({
-            name: 'Vitesse Electric Longboards',
-            description: '1 Electric Longboard ($699.00)',
-            amount: 69900,
-            shippingAddress: true,
-        });
-        e.preventDefault();
-    });
-    </script>
-
-	<!-- Waypoints -->
-	<script src="{{ url_for('static', filename='js/jquery.waypoints.min.js') }}"></script>
-	<!-- Stellar Parallax -->
-	<script src="{{ url_for('static', filename='js/jquery.stellar.min.js') }}"></script>
-	<!-- Main JS (Do not remove) -->
-	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
-	<!-- Google Analytics -->
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-75325693-1', 'auto');
-        ga('send', 'pageview');
-    </script>
+            <form action="/affiliates/create" method="POST">
+                <input type="text" name="name" id="name" placeholder="name" /><br>
+                <input type="text" name="email" id="email" placeholder="email" /><br>
+                <textarea name="address" id="address" placeholder="address"></textarea><br>
+                <input type="text" name="code" id="code" maxlength="8" placeholder="code" /><br>
+                <input type="password" name="password" id="password" placeholder="password" /><br>
+                <input type="submit" value="submit">
+            </form>
+            <br><br>
+            <center>
+              <table class="affil-table">
+                  <thead>
+                      <tr>
+                          <td>Name</td>
+                          <td>Email</td>
+                          <td>Code</td>
+                          <td>Count</td>
+                      </tr>
+                  </thead>
+                  <tbody>
+                  {% for affiliate in affiliates %}
+                      <tr>
+                          <td>{{ affiliate.name }}</td>
+                          <td>{{ affiliate.email }}</td>
+                          <td>{{ affiliate.code }}</td>
+                          <td>{{ affiliate.count }}</td>
+                      </tr>
+                  {% endfor %}
+                  </tbody>
+              </table>
+            </center>
 	</body>
 </html>
